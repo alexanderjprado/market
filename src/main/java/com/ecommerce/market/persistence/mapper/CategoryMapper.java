@@ -7,8 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-@Mapper(componentModel = "spring", uses = {ICategoryMapper.class})
-public interface ICategoryMapper {
+@Mapper(componentModel = "spring", uses = {CategoryMapper.class})
+public interface CategoryMapper {
     @Mappings({
         @Mapping(source = "idCategoria", target = "categoryId"),
         @Mapping(source = "descripcion", target = "category"),

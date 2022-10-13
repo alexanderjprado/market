@@ -1,4 +1,4 @@
-package com.ecommerce.market.persistence.crud;
+package com.ecommerce.market.persistence.entity.crud;
 
 import com.ecommerce.market.persistence.entity.Producto;
 import org.springframework.data.jpa.repository.Modifying;
