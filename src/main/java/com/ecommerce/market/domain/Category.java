@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Category {
-    private Long categoryId;
+    private int categoryId;
     private String category;
     private boolean active;
 }

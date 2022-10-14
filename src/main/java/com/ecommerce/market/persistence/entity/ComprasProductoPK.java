@@ -20,8 +20,8 @@ public class ComprasProductoPK implements Serializable {
     private static final long serialVersionUID = -5660348287776661776L;
 
     @Column(name = "id_compra")
-    private Long idCompra;
+    private Integer idCompra;
 
     @Column(name = "id_producto")
-    private Long idProducto;
+    private Integer idProducto;
 }

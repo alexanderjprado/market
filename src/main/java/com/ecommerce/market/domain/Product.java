@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class Product {
-    private Long productId;
+    private int productId;
     private String name;
-    private Long categoryId;
+    private int categoryId;
     private BigDecimal price;
     private int stock;
     private boolean active;

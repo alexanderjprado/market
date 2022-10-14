@@ -22,13 +22,13 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto", nullable = false)
-    private Long idProducto;
+    private Integer idProducto;
 
     @Column(length = 45)
     private String nombre;
 
     @Column(name = "id_categoria")
-    private Long idCategoria;
+    private Integer idCategoria;
 
     @Column(name = "codigo_barras", length = 150)
     private String codigoBarras;
