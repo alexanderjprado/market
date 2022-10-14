@@ -3,6 +3,7 @@ package com.ecommerce.market.persistence.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +24,7 @@ import java.util.List;
 public class Compra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_compra", nullable = false)
+    @Column(name = "id_compra")
     private Integer idCompra;
 
     @Column(name = "id_cliente", length = 20)
@@ -32,12 +33,12 @@ public class Compra {
     private LocalDateTime fecha;
 
     @Column(name = "medio_pago", length = 1)
-    private Character medioPago;
+    private String medioPago;
 
-    @Column(name = "comentario", length = 300)
+    @Column(length = 300)
     private String comentario;
 
-    private Boolean estado;
+    private String estado;
 
     //RELACIONES ENTRE CLASES
     //RELACIÓN COMPRA --> CLIENTE
@@ -46,7 +47,7 @@ public class Compra {
     private Cliente cliente;
 
     //RELACIÓN COMPRA --> COMPRAS_PRODUCTOS
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.ALL})
     @JoinColumn(name = "compra")
     private List<ComprasProducto> productos;
 }

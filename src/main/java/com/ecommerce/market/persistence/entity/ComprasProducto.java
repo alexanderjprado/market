@@ -8,6 +8,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
@@ -18,7 +19,7 @@ import java.math.BigDecimal;
 public class ComprasProducto {
 
     @EmbeddedId
-    private ComprasProductoPK comprasProductoPK;
+    private ComprasProductoPK id;
 
     private Integer cantidad;
 
@@ -35,6 +36,7 @@ public class ComprasProducto {
 
     //RELACIÓN COMPRAS_PRODUCTOS --> COMPRAS
     @ManyToOne
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 }
