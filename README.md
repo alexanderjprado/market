@@ -1,2 +1,2 @@
 # Market🏪
-Proyecto para crear una API con Spring
+Proyecto para crear una API REST con Spring
